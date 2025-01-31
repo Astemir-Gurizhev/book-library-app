@@ -49,6 +49,8 @@
 .book-list .book-actions {
 	display: flex;
 	align-items: center;
+	color: red;
+	cursor: pointer;
 }
 
 .book-list .star-icon {
