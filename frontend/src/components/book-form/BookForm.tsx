@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import { FormEventHandler, useState } from 'react'
 import './BookForm.css'
 const BookForm = () => {
 	const [title, setTitle] = useState('')
 	const [author, setAuthor] = useState('')
-	const handleSubmit = e => {
+	const handleSubmit:FormEventHandler<HTMLFormElement> = e => {
 		e.preventDefault()
 		if (title && author) {
 			//dispatch
