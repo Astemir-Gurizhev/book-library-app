@@ -49,10 +49,11 @@
 .book-list .book-actions {
 	display: flex;
 	align-items: center;
+}
+.book-list .trash-icon {
 	color: red;
 	cursor: pointer;
 }
-
 .book-list .star-icon {
 	width: 24px;
 	height: 24px;

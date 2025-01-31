@@ -1,3 +1,4 @@
+import { BsBookmarkStar, BsBookmarkStarFill } from 'react-icons/bs'
 import { FaTrashCan } from 'react-icons/fa6'
 import { useDispatch, useSelector } from 'react-redux'
 import { deleteBook } from '../../redux/books/actionCreators'
@@ -21,11 +22,17 @@ const BookList = () => {
 							<div className='book-info'>
 								{++i}. {book.title} by <strong>{book.author}</strong>
 							</div>
-							<div
-								onClick={() => handleDelete(book.id)}
-								className='book-actions'
-							>
-								<FaTrashCan />
+							<div className='book-actions'>
+								{book.isFavorite ? (
+									<BsBookmarkStarFill className='star-icon' />
+								) : (
+									<BsBookmarkStar className='star-icon' />
+								)}
+
+								<FaTrashCan
+									onClick={() => handleDelete(book.id)}
+									className='trash-icon'
+								/>
 							</div>
 						</li>
 					))}
