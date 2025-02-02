@@ -14,6 +14,6 @@ const filterSlice = createSlice({
 	},
 })
 
-console.log(filterSlice.actions)
+export const {setTitleFilter} = filterSlice.actions
 
 export default filterSlice.reducer
